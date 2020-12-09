@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Half and double calculator</title>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href=calculadora-en.html><img class="imgbar" src="img/uk.svg"></a></li>
+            <li><a href="calculadora.html"><img class="imgbar" src="img/pt.svg"></a></li>
+        </ul>
+    </header>
+    <div class="conteudo">
+        Welcome to the half and double calculator. To start, type a number below:<br><br>
+        <input oninput="dobrar(); dividirMetade();" type="text" name="" id="input" placeholder="Digite o valor"><br>
+        The double is: <span id="titulo">x</span><br><br>
+        The half is: <span id="titmed">x</span><br><br>
+        If you'd like to change the site background's color, just type a hexadecimal number or its name.<br><br>
+        <input type="text" name="" id="inputdois" placeholder="e.g: #FFFFFF">
+        <button id="btn" onclick="mudarCorDeFundo()">Change Background Color</button>
+    </div>
+</body>
+<script>
+    var valor;
+    var resultado;
+    var color;
+    function mudarCorDeFundo()
+    {
+        color = document.getElementById('inputdois').value;
+        document.body.style.backgroundColor = color;
+    }
+    function dobrar()
+    {
+        valor = document.getElementById('input').value;
+         resultado = valor * 2;
+         document.getElementById('titulo').innerText = resultado;
+    }
+    function dividirMetade()
+    {
+        valor = document.getElementById('input').value;
+         resultado = valor / 2;
+         document.getElementById('titmed').innerText = resultado;
+    }
+</script>
+</html>
+<!-- onclick="dobrar()"
+document.getElementById('input').value = resultado;
+<button>Enviar</button>-->

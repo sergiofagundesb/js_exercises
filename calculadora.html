@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora de metade e dobro via browser</title>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href=calculadora-en.html><img class="imgbar" src="img/uk.svg"></a></li>
+            <li><a href="calculadora.html"><img class="imgbar" src="img/pt.svg"></a></li>
+        </ul>
+    </header>
+    <div class="conteudo">
+        Bem-vindo a calculadora da metade e dobro de um número. Para começar, digite um número abaixo:<br><br>
+        <input oninput="dobrar(); dividirMetade();" type="text" name="" id="input" placeholder="Digite o valor"><br>
+        O dobro é: <span id="titulo"> </span><br><br>
+        A metade é: <span id="titmed"> </span><br><br>
+        Caso queira alterar a cor de fundo do site, escolha uma cor em hexadecimal ou com o nome em inglês.<br><br>
+        <input type="text" name="" id="inputdois" placeholder="Ex: #FFFFFF">
+        <button id="btn" onclick="mudarCorDeFundo()">Alterar cor</button>
+    </div>
+</body>
+<script>
+    var valor;
+    var resultado;
+    var color;
+    function mudarCorDeFundo()
+    {
+        color = document.getElementById('inputdois').value;
+        document.body.style.backgroundColor = color;
+    }
+    function dobrar()
+    {
+        valor = document.getElementById('input').value;
+         resultado = valor * 2;
+         document.getElementById('titulo').innerText = resultado;
+    }
+    function dividirMetade()
+    {
+        valor = document.getElementById('input').value;
+         resultado = valor / 2;
+         document.getElementById('titmed').innerText = resultado;
+    }
+</script>
+</html>
+<!-- onclick="dobrar()"
+document.getElementById('input').value = resultado;
+<button>Enviar</button>-->

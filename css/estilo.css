@@ -1,0 +1,11 @@
+ul
+{
+    display:inline-block;
+    vertical-align:top;
+    margin-right:15%;
+    width:20%;
+}
+#imagem_servidor
+{
+    width:50%;
+}
