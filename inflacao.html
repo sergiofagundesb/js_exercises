@@ -8,9 +8,9 @@
 <script>
     //====[ Inflation Calculator of Tomatoes, Rice and Carrots]
     document.write("=======================[ CALCULADORA DE INFLAÇÃO - RESILIA AULA 13]================================<br><br>");
-    var MediaUm;
-    var MediaDois;
-    var MediaTres;
+    var mediaUm;
+    var mediaDois;
+    var mediaTres;
     function calculaInflacao(nome, precoinicial,precofinal,dias)
     {
         var delta = precofinal - precoinicial;
@@ -22,12 +22,12 @@
     }
     function calculaTudo()
     {
-        var total =(MediaUm+MediaDois+MediaTres)/3;
+        var total =(mediaUm+mediaDois+mediaTres)/3;
         return document.write("A variação dos preços nesse período foi em média "+ total.ToFixed(2));
     }
-    MediaUm = calculaInflacao("Tomate",3.30,4.70,6); //tomate
-    MediaDois = calculaInflacao("Arroz",2.99,3.25,6); //arroz
-    MediaTres = calculaInflacao("Cenoura",3.99,4.14,6); // cenoura
+    mediaUm = calculaInflacao("Tomate",3.30,4.70,6); //tomate
+    mediaDois = calculaInflacao("Arroz",2.99,3.25,6); //arroz
+    mediaTres = calculaInflacao("Cenoura",3.99,4.14,6); // cenoura
     calculaTudo();
 
 </script>

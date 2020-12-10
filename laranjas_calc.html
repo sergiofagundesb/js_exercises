@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/laranja_style.css">
+    <title>Document</title>
+</head>
+<script>
+    var mediaUm;
+    var mediaDois;
+    var mediaTres;
+    function calculaLaranjas(total_lar, people)
+    {
+        var resto;
+        total_lar = document.getElementById('laranjas').value;
+        people = document.getElementById('pessoas').value;
+        resto = (total_lar%people);
+        if(resto == 1)
+        {
+            document.getElementById('resultado').innerText = "Sobrará 1 laranja nessa divisão";
+        }
+        else
+        {
+            document.getElementById('resultado').innerText = "Sobrarão "+resto+" laranjas nessa divisão";
+        }
+    }
+</script>
+<body>
+    <div class="conteudo">
+        <p class="texto">================================[CALCULADORA DAS LARANJAS - RESILIA AULA 13]================================</p>
+        <p class="texto"> Digite a quantidade de laranjas que você deseja dividir</p>
+        <input type="text" name="" id="laranjas" placeholder="Ex:1">
+        <p class="texto"> Digite o total de pessoas que irão receber as laranjas</p>
+        <input type="text" name="" id="pessoas" placeholder="Ex:1"><br><br>
+        <p class="texto" id="resultado"></p>
+        <button onclick="calculaLaranjas()">Calcular</button>
+    </div>
+</body>
+</html>
