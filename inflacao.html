@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //====[ Inflation Calculator of Tomatoes, Rice and Carrots]
+    document.write("=======================[ CALCULADORA DE INFLAÇÃO - RESILIA AULA 13]================================<br><br>");
+    var MediaUm;
+    var MediaDois;
+    var MediaTres;
+    function calculaInflacao(nome, precoinicial,precofinal,dias)
+    {
+        var delta = precofinal - precoinicial;
+        percentagem = 100*(delta/precoinicial);
+        percentagemMedia = percentagem/dias;
+        document.write("O "+nome+" inflacionou de preço "+delta.toFixed(2)+" reais e "+percentagem.toFixed(2)+" %<br>");
+        document.write("A inflação diária foi de " +(delta/dias).toFixed(2)+" reais, ou seja "+percentagemMedia.toFixed(2)+" %<br>");
+        return percentagem;
+    }
+    function calculaTudo()
+    {
+        var total =(MediaUm+MediaDois+MediaTres)/3;
+        return document.write("A variação dos preços nesse período foi em média "+ total.ToFixed(2));
+    }
+    MediaUm = calculaInflacao("Tomate",3.30,4.70,6); //tomate
+    MediaDois = calculaInflacao("Arroz",2.99,3.25,6); //arroz
+    MediaTres = calculaInflacao("Cenoura",3.99,4.14,6); // cenoura
+    calculaTudo();
+    document.write("=======================[ CALCULADORA DE INFLAÇÃO - RESILIA AULA 13]================================<br><br>");
+
+</script>
+<body>
+    
+</body>
+</html>
