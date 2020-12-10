@@ -2,8 +2,6 @@ function pizzaCount(production_cost,sale_price,name)
 {
     var net_profit;
     var taxes;
-    var fixProductionCost;
-    var fixSalePrice;
     production_cost = document.getElementById('custo').value;
     sale_price = document.getElementById('venda').value;
     name = document.getElementById('nome_pizza').value;
