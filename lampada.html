@@ -1,0 +1,30 @@
+<script>
+var lampadaPlugada = true;
+var bulboQueimado = false;
+
+if(lampadaPlugada == true)
+{
+    if(bulboQueimado == true)
+    {
+        console.log("Trocar o bulbo");
+    }
+    else
+    {
+        console.log("Comprar uma lâmpada nova");
+    }
+}
+else
+{
+    console.log("Plugar a lâmpada");
+}
+function juntaString(nome)
+{
+    return "Olá "+nome+"?"+" Tudo bem, "+nome+"?";
+}
+function modNove(numero)
+{
+    return numero%9;
+}
+console.log("O resto de 1000 dividido por 9 é: "+modNove(1000));
+console.log(juntaString("Fulano"));
+</script>

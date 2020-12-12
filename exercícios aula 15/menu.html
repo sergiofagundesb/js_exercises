@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script>
+        var escolha;
+        function exibirMenu()
+        {
+            return console.log("1-Refrigerante\n2-Suco\n3-Água");
+        }
+        function recebeEscolha(choice)
+        {
+            switch(choice)
+            {
+                case 1:
+                    console.log("Você escolheu refrigerante(nº1)");
+                    break;
+                case 2:
+                    console.log("Você escolheu suco(nº2)");
+                    break;
+                case 3:
+                    console.log("Você escolheu água(nº3)");
+                    break;
+                default:
+                    console.log("Número inexistente no menu");
+                    break;
+            }
+        }
+        exibirMenu();
+        escolha = window.prompt("Escolha o seu pedido");
+        recebeEscolha(parseInt(escolha));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

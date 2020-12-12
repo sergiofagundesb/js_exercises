@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O motorista</title>
+    <script>
+
+        function checaIdade(idusuario,idporlei)
+        {
+            if(idusuario < 0 || idporlei < 0)
+            {
+                console.log("Idade inválida");
+            }
+            if(idusuario < idporlei)
+            {
+                console.log("Você não pode dirigir");
+            }
+            else
+            {
+                console.log("Você pode dirigir");
+            }
+        }
+        var inputUsuario = window.prompt("Digite a sua idade");
+        var inputIdadeLei = window.prompt("Digite a idade em que é permitido dirigir no país.");
+        checaIdade(inputUsuario,inputIdaadeLei);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
