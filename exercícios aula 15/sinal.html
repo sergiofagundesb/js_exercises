@@ -11,7 +11,7 @@
             switch(cor)
             {
                 case "verde":
-                    console.log("pode passar!");
+                    console.slog("pode passar!");
                     break;
                 case "amarelo":
                     console.log("melhor frear!");
@@ -22,6 +22,8 @@
                 default:
             }
         }
+        var corEntrada = window.prompt("Digite a cor do sinal");
+        semaforo(corEntrada.toLowerCase());
     </script>
 </head>
 <body>
