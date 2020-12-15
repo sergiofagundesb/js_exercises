@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de consumo</title>
+</head>
+<body>
+    <script>
+        var numeroInput = parseInt(window.prompt("Digite um número"));
+        analisaNumero(numeroInput);
+        function analisaNumero(number)
+        {
+            if(number == 0)
+            {
+                console.log("[ERRO] Zero não tem divisor. Tente novamente.");
+                numeroInput = parseInt(window.prompt("Digite um número"));
+            }
+            for(var i = 1; i < number; i++)
+            {
+                if(number%i == 0)
+                {
+                    console.log(i+" é divisor de "+number);
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
