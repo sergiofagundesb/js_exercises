@@ -13,10 +13,10 @@ function analisaNumero(number)
     {
         for(var j = 0; j < armazena.length; j++)
         {
-            console.log("Comparando armazena["+i+"]"+" com ["+j+"].");
+            console.log("Comparando armazena["+i+"]"+" com armazena["+j+"].");
             if(armazena[i] < armazena[j])
             {
-                console.log("armazena["+i+"]"+" é menor armazena["+j+"], permutou.");
+                console.log("armazena["+i+"]"+" é menor que armazena["+j+"], permutou.");
                 pass = armazena[i];
                 armazena[i] = armazena[j];
                 armazena[j] = pass;
