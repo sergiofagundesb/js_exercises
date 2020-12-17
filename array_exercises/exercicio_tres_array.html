@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+var soma = 0;
+var multiplos = [];
+function somaMultiplo(numero)
+{
+    if(numero < 0)
+    {
+        return 0;
+    }
+    for(var i = 1; i < numero; i++)
+    {
+        if(3*i < numero)
+        {
+            multiplos.push(3*i);
+        }
+        if(5*i < numero)
+        {
+            multiplos.push(5*i);
+        }
+    }
+    console.log("A array com múltiplos é: "+multiplos);
+    somaElementos(multiplos);
+}
+function somaElementos(arr)
+{
+    for(var i = 0; i < multiplos.length; i++)
+    {
+        soma += multiplos[i];
+    }
+    console.log("A soma é "+soma);
+}
+var recebeValor = parseInt(window.prompt("Digite um número"));
+somaMultiplo(recebeValor);
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -13,7 +13,12 @@
         {
             if(number == 0)
             {
-                console.log("[ERRO] Zero não tem divisor. Tente novamente.");
+                alert("[ERRO] Zero não tem divisor. Tente novamente.");
+                numeroInput = parseInt(window.prompt("Digite um número"));
+            }
+            if(isNan() == true)
+            {
+                alert("[ERRO] Digite apenas números. Tente novamente.");
                 numeroInput = parseInt(window.prompt("Digite um número"));
             }
             for(var i = 1; i < number; i++)
