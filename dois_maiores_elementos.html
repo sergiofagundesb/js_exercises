@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var numero_input_um = parseInt(window.prompt("Digite a quantidade de números"))
+    var numero_maior_menos_um = 0;
+    var numero_maior = 0;
+    checaNumeros(numero_input_um);
+    function checaNumeros(numero)
+    {
+        for(var i =0; i< numero; i++)
+        {
+            var dialog = parseInt(window.prompt("Digite o "+(i+1)+"º número."));
+            if(dialog > numero_maior_menos_um && numero_maior_menos_um < numero_maior)
+            {
+                numero_maior_menos_um = dialog;
+            }
+            if(dialog > numero_maior)
+            {
+                numero_maior = dialog;
+            }
+            console.log("MAIOR VALOR "+numero_maior);
+            console.log("SEGUNDO MAIOR VALOR "+numero_maior_menos_um);
+        }
+        if(numero_maior_menos_um == numero_maior)
+        {
+            console.log("Números iguais, produto igual a 0");
+        }
+        else
+        {
+            console.log("O produto entre"+numero_maior+" e "+numero_maior_menos_um+" é "+(numero_maior*numero_maior_menos_um));
+        }
+    }
+</script>
+<body>
+    
+</body>
+</html>
