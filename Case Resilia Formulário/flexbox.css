@@ -1,0 +1,17 @@
+.cabecalho .pai
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.navi
+{
+    display:flex;
+}
+.inicioform
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
