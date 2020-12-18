@@ -1,5 +1,6 @@
 
 var vezes = document.getElementById('numerodevezes').value;
+function ChecaNumeroNoVetor(numero,array)
 function geraBilhete(qtd)
 {
     document.getElementById('resultadofinal').innerText = " ";
@@ -11,7 +12,7 @@ function geraBilhete(qtd)
         {
             bilhete.push(k); // coloca números de 1 a 60 para serem sorteados.
         }
-        console.log(bilhete); // verifica se todos os números foram colocados corretamente.
+        console.log("ultimo numero "+bilhete[59]); // verifica se todos os números foram colocados corretamente.
         for(var j = 0; j < 6; j++) // faz a adição de 6 elementos ao vetor "resultado" através de um laço de repetição
         {
             var sorteado = Math.round(Math.random(bilhete)*60); // faz o sorteio de um número com limite até 60.
