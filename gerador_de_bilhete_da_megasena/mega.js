@@ -1,6 +1,4 @@
-
 var vezes = document.getElementById('numerodevezes').value;
-function ChecaNumeroNoVetor(numero,array)
 function geraBilhete(qtd)
 {
     document.getElementById('resultadofinal').innerText = " ";

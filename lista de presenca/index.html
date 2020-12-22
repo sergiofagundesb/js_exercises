@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var alunosMatriculados = [ "a", "b", "c", "d", "e" ];
+    // Presença diária
+    var presencaSegunda = [ "b", "d", "e" ]; // -> 3 elementos ... 3/5
+    var presencaTerca = [ "a", "b", "c" ]; // ->  3 elementos ... 3/5
+    var presencaQuarta = ["a", "b", "e" ];
+    var presencaQuinta = [ "a", "b", "c", "d" ];
+    var presencaSexta = [ "a", "b", "c", "d", "e" ];
+    var presencaSemanal = [];
+    adicionaLista();
+    calculaPresencaSemanal(presencaSemanal);
+    function adicionaLista()
+    {
+        presencaSemanal.push(presencaSegunda);
+        presencaSemanal.push(presencaTerca);
+        presencaSemanal.push(presencaQuarta);
+        presencaSemanal.push(presencaQuinta);
+        presencaSemanal.push(presencaSexta);
+    }
+    function calculaPresencaSemanal(lista)
+    {
+        var soma = 0;
+        var total = alunosMatriculados.length;
+        for(var i = 0; i < lista.length ; i++)
+        {
+            soma += lista[i].length*100/total;
+        }
+        return soma/5;
+    }
+    console.log(calculaPresencaSemanal(presencaSemanal));
+</script>
+</html>
