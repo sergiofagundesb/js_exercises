@@ -24,13 +24,26 @@ function geraBilhete(qtd,numeros)
                     {
                         console.log("Houve uma igualdade! Ressorteando valores...");
                         sorteado[j] = getRandom(1,60);
-                        if(sorteado[j] != sorteado[k])
-                            break;
+                        //if(sorteado[j] != sorteado[k])
+                            //break;
                     }
                 }
             }
         }
-
+        //bubble sort para colocar os números em ordem crescente, tal como todo gerador de lotto faz.
+        for(var a = 0; a < sorteado.length; a++)
+        {
+            var pass;
+            for(var b = 0; b < sorteado.length; b++)
+            {
+                if(sorteado[a] < sorteado[b])
+                {
+                    pass = sorteado[a];
+                    sorteado[a] = sorteado[b];
+                    sorteado[b] = pass;
+                }
+            }
+        }
         document.getElementById('resultadofinal').innerText += "Resultado do bilhete "+(i+1)+": "+sorteado+"\n";
     }
 }
