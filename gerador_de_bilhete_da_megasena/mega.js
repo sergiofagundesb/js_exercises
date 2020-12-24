@@ -14,15 +14,15 @@ function geraBilhete(qtd,numeros)
         {
             for(var k=0; k < numeros; k++)
             {
-                if(j != k) // apenas para debug
+                /*if(j != k) // debug only...
                 {
                     console.log(`Verificando se sorteado[${j}]=${sorteado[j]} é igual a sorteado[${k}]=${sorteado[k]}`)
-                }
+                }*/
                 if(sorteado[j] == sorteado[k] && j != k)
                 {
                     while(sorteado[j] == sorteado[k]) // O loop só acaba quando o valor sorteado for diferente(Pode acontecer de ser sorteado o mesmo valor)
                     {
-                        console.log("Houve uma igualdade! Ressorteando valores...");
+                        //console.log("Houve uma igualdade! Ressorteando valores...");
                         sorteado[j] = getRandom(1,60);
                         //if(sorteado[j] != sorteado[k])
                             //break;
