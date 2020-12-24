@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="saudacao">OLA</p>
+</body>
+<script>
+    var pote = ["a","b", "c","d","e","f","g","h","i"];
+    for(var i = 0; i < pote.length; i++)
+    {
+        var a = document.createElement("button");
+        a.textContent = pote[i];
+        a.setAttribute("onclick", "mostraNome("+i+")");
+        document.body.append(a);
+    }
+    function mostraNome(number)
+    {
+        alert("OLÁ "+pote[number]);
+    }
+
+</script>
+</html>
