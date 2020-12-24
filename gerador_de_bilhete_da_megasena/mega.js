@@ -1,30 +1,40 @@
 var vezes = document.getElementById('numerodevezes').value;
-function geraBilhete(qtd)
+function geraBilhete(qtd,numeros)
 {
     document.getElementById('resultadofinal').innerText = " ";
-    var resultado = [];
     for(var i = 0; i < qtd; i++) // faz o sorteio de "i" bilhetes.
     {
-        var bilhete = [];
-        for(k = 1; k<= 60; k++)
+        var sorteado = [];
+        //console.log("ultimo numero "+bilhete[59]); // verifica se todos os números foram colocados corretamente.
+        for(var j = 0; j < numeros; j++) // faz a adição de 6 elementos ao vetor "resultado" através de um laço de repetição
         {
-            bilhete.push(k); // coloca números de 1 a 60 para serem sorteados.
+            sorteado.push(getRandom(1,60));
         }
-        console.log("ultimo numero "+bilhete[59]); // verifica se todos os números foram colocados corretamente.
-        for(var j = 0; j < 6; j++) // faz a adição de 6 elementos ao vetor "resultado" através de um laço de repetição
+        for(var j = 0; j < numeros; j++) //checa se há algum elemento repetido...
         {
-            var sorteado = Math.round(Math.random(bilhete)*60); // faz o sorteio de um número com limite até 60.
-            resultado.push(sorteado);
-            console.log(sorteado+" foi o "+(j+1)+" º número sorteado");
-            bilhete.splice(sorteado-1, 1);
-            console.log(bilhete);
-            if(j == 5)
+            for(var k=0; k < numeros; k++)
             {
-                console.log("Bilhete número "+(i+1));
-                console.log(resultado);
-                document.getElementById('resultadofinal').innerText += "Resultado do bilhete "+(i+1)+": "+resultado+"\n";
-                resultado.splice(0,6);
+                if(j != k) // apenas para debug
+                {
+                    console.log(`Verificando se sorteado[${j}]=${sorteado[j]} é igual a sorteado[${k}]=${sorteado[k]}`)
+                }
+                if(sorteado[j] == sorteado[k] && j != k)
+                {
+                    while(sorteado[j] == sorteado[k]) // O loop só acaba quando o valor sorteado for diferente(Pode acontecer de ser sorteado o mesmo valor)
+                    {
+                        console.log("Houve uma igualdade! Ressorteando valores...");
+                        sorteado[j] = getRandom(1,60);
+                        if(sorteado[j] != sorteado[k])
+                            break;
+                    }
+                }
             }
         }
+
+        document.getElementById('resultadofinal').innerText += "Resultado do bilhete "+(i+1)+": "+sorteado+"\n";
     }
+}
+function getRandom(min,max)
+{
+    return min + Math.floor(Math.random() * (max-min) + 1);
 }
