@@ -32,6 +32,9 @@ function pegaQuadrado(id)
         }
         quemGanhou();
     }
+}
+function quemGanhou()
+{
     if(venceu == true)
     {
             var confirma = confirm("Jogo encerrado. Deseja iniciar um novo jogo?");
@@ -40,51 +43,48 @@ function pegaQuadrado(id)
                  return novoJogo();
             }
     }
-}
-function quemGanhou()
-{
     if(quadradosRestantes == 0)
     {
-        alert("DEU VELHA");
+        document.getElementById("resultado").innerText = `DEU VELHA`;
     }
     if(resultadoFinal[0] == resultadoFinal[1] && resultadoFinal[1] == resultadoFinal[2] != 0)
     {
-        alert(`O jogador ${resultadoFinal[0]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[0]} venceu`;
         venceu = true;
     }
     else if(resultadoFinal[3] == resultadoFinal[4] && resultadoFinal[4] == resultadoFinal[5] && resultadoFinal[5] != 0)
     {
-        alert(`O jogador ${resultadoFinal[3]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[3]} venceu`;
         venceu = true;
     }
     else if(resultadoFinal[6] == resultadoFinal[7] && resultadoFinal[7] == resultadoFinal[8] && resultadoFinal[8] != 0)
     {
-        alert(`O jogador ${resultadoFinal[6]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[6]} venceu`;
         venceu = true;
     }
     else if(resultadoFinal[0] == resultadoFinal[3] && resultadoFinal[3] == resultadoFinal[6] && resultadoFinal[6] != 0)
     {
-        alert(`O jogador ${resultadoFinal[0]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[0]} venceu`;
         venceu = true;
     }
     else if(resultadoFinal[1] == resultadoFinal[4] && resultadoFinal[4] == resultadoFinal[7] && resultadoFinal[7] != 0)
     {
-        alert(`O jogador ${resultadoFinal[1]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[1]} venceu`;
         venceu = true;
     }
     else if(resultadoFinal[2] == resultadoFinal[5] && resultadoFinal[5] == resultadoFinal[8] && resultadoFinal[8] != 0)
     {
-        alert(`O jogador ${resultadoFinal[2]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[2]} venceu`;
         venceu = true;
     }
     else if(resultadoFinal[0] == resultadoFinal[4] && resultadoFinal[4] == resultadoFinal[8] && resultadoFinal[8] != 0)
     {
-        alert(`O jogador ${resultadoFinal[0]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[0]} venceu`;
         venceu = true;
     }
     else if(resultadoFinal[2] == resultadoFinal[4] && resultadoFinal[4] == resultadoFinal[6] && resultadoFinal[6] != 0)
     {
-        alert(`O jogador ${resultadoFinal[2]} venceu`);
+        document.getElementById("resultado").innerText = `O jogador ${resultadoFinal[2]} venceu`;
         venceu = true;
     }
 }
@@ -95,6 +95,7 @@ function novoJogo()
     resultadoFinal = [0,0,0,0,0,0,0,0,0]; 
     venceu = false;
     quadradosRestantes = 9;
+    ocument.getElementById("resultado").innerText = "";
     for(var i = 0; i < 9; i ++)
     {
         document.getElementById(i).innerText="";

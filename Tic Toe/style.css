@@ -3,4 +3,5 @@ td{
     height:64px;
     background-color:lightgray;
     cursor: pointer;
+    text-align:center;
 }
